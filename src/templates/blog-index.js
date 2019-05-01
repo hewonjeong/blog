@@ -1,5 +1,5 @@
 import { Link, graphql } from 'gatsby';
-import { formatPostDate, formatReadingTime } from '../utils/helpers';
+import { formatPostDate } from '../utils/helpers';
 
 import Bio from '../components/Bio';
 import Footer from '../components/Footer';
@@ -30,7 +30,7 @@ class BlogIndexTemplate extends React.Component {
                 <header>
                   <h3
                     style={{
-                      fontFamily: 'Montserrat, sans-serif',
+                      //fontFamily: 'Montserrat, sans-serif',
                       fontSize: rhythm(1),
                       marginBottom: rhythm(1 / 4),
                     }}
@@ -43,10 +43,7 @@ class BlogIndexTemplate extends React.Component {
                       {title}
                     </Link>
                   </h3>
-                  <small>
-                    {formatPostDate(node.frontmatter.date, 'en')}
-                    {` • ${formatReadingTime(node.timeToRead)}`}
-                  </small>
+                  <small>{formatPostDate(node.frontmatter.date, 'en')}</small>
                 </header>
                 <p
                   dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}

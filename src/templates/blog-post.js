@@ -7,7 +7,7 @@ import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Panel from '../components/Panel';
-import { formatPostDate, formatReadingTime } from '../utils/helpers';
+import { formatPostDate } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
 import {
   codeToLanguage,
@@ -85,7 +85,6 @@ class BlogPostTemplate extends React.Component {
                 }}
               >
                 {formatPostDate(post.frontmatter.date, 'en')}
-                {` • ${formatReadingTime(post.timeToRead)}`}
               </p>
             </header>
             <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -105,15 +104,15 @@ class BlogPostTemplate extends React.Component {
         <aside>
           <h3
             style={{
-              fontFamily: 'Montserrat, sans-serif',
-              marginTop: rhythm(0.25),
+              //fontFamily: 'Montserrat, sans-serif',
+              marginTop: rhythm(3.25),
             }}
           >
             <Link
               style={{
                 boxShadow: 'none',
                 textDecoration: 'none',
-                color: 'var(--pink)',
+                color: '#222',
               }}
               to={'/'}
             >
