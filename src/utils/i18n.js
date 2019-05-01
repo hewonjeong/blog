@@ -33,6 +33,9 @@ export const loadFontsForCode = code => {
     case 'fr':
     case 'hu':
     case 'it':
+    case 'ko':
+      import('../fonts/fonts-post.ko.css');
+      break;
     case 'nl':
     case 'no':
     case 'pl':

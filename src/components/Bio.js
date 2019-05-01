@@ -1,35 +1,35 @@
 import React from 'react';
-import profilePic from '../assets/profile-pic.jpg';
+import profilePic from '../assets/profile-pic.jpeg';
 import { rhythm } from '../utils/typography';
 
 class Bio extends React.Component {
   render() {
     return (
-      <div
-        style={{
-          display: 'flex',
-          marginBottom: rhythm(2),
-        }}
-      >
-        <img
-          src={profilePic}
-          alt={`Dan Abramov`}
-          style={{
-            marginRight: rhythm(1 / 2),
-            marginBottom: 0,
-            width: rhythm(2),
-            height: rhythm(2),
-            borderRadius: '50%',
-          }}
-        />
-        <p style={{ maxWidth: 310 }}>
-          Personal blog by{' '}
-          <a href="https://mobile.twitter.com/dan_abramov">Dan Abramov</a>.{' '}
-          I&nbsp;explain with words and code.
+      <div style={style.Bio}>
+        <img src={profilePic} alt={`Hewon Jeong`} style={style.img} />
+        <p style={style.text}>
+          {'Personal blog by '}
+          <a href="https://github.com/hewonjeong">Hewon Jeong</a>
+          <br />
+          I'm practicing here to be a craftman.🧘🏻‍♂️
         </p>
       </div>
     );
   }
 }
 
+const style = {
+  Bio: {
+    display: 'flex',
+    marginBottom: rhythm(2),
+  },
+  img: {
+    marginRight: rhythm(1 / 2),
+    marginBottom: 0,
+    width: rhythm(2),
+    height: rhythm(2),
+    borderRadius: '50%',
+  },
+  text: { maxWidth: 310 },
+};
 export default Bio;

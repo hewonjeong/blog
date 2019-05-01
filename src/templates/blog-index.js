@@ -4,7 +4,6 @@ import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import Bio from '../components/Bio';
 import Footer from '../components/Footer';
 import Layout from '../components/Layout';
-import Panel from '../components/Panel';
 import React from 'react';
 import SEO from '../components/SEO';
 import get from 'lodash/get';
@@ -24,20 +23,6 @@ class BlogIndexTemplate extends React.Component {
           <Bio />
         </aside>
         <main>
-          {langKey !== 'en' && langKey !== 'ru' && (
-            <Panel>
-              These articles have been{' '}
-              <a
-                href="https://github.com/gaearon/overreacted.io#contributing-translations"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                translated by the community
-              </a>
-              .
-            </Panel>
-          )}
-
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug;
             return (
@@ -51,7 +36,7 @@ class BlogIndexTemplate extends React.Component {
                     }}
                   >
                     <Link
-                      style={{ boxShadow: 'none' }}
+                      style={{ boxShadow: 'none', color: '#333' }}
                       to={node.fields.slug}
                       rel="bookmark"
                     >
@@ -59,7 +44,7 @@ class BlogIndexTemplate extends React.Component {
                     </Link>
                   </h3>
                   <small>
-                    {formatPostDate(node.frontmatter.date, langKey)}
+                    {formatPostDate(node.frontmatter.date, 'en')}
                     {` • ${formatReadingTime(node.timeToRead)}`}
                   </small>
                 </header>

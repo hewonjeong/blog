@@ -35,7 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
     // Create index pages for all supported languages
     Object.keys(supportedLanguages).forEach(langKey => {
       createPage({
-        path: langKey === 'en' ? '/' : `/${langKey}/`,
+        path: langKey === 'ko' ? '/' : `/${langKey}/`,
         component: path.resolve('./src/templates/blog-index.js'),
         context: {
           langKey,
@@ -91,7 +91,7 @@ exports.createPages = ({ graphql, actions }) => {
             const directoryName = _.get(post, 'node.fields.directoryName');
             const langKey = _.get(post, 'node.fields.langKey');
 
-            if (directoryName && langKey && langKey !== 'en') {
+            if (directoryName && langKey && langKey !== 'ko') {
               (result[directoryName] || (result[directoryName] = [])).push(
                 langKey
               );
@@ -103,7 +103,7 @@ exports.createPages = ({ graphql, actions }) => {
         );
 
         const defaultLangPosts = posts.filter(
-          ({ node }) => node.fields.langKey === 'en'
+          ({ node }) => node.fields.langKey === 'ko'
         );
         _.each(defaultLangPosts, (post, index) => {
           const previous =
@@ -129,7 +129,7 @@ exports.createPages = ({ graphql, actions }) => {
           });
 
           const otherLangPosts = posts.filter(
-            ({ node }) => node.fields.langKey !== 'en'
+            ({ node }) => node.fields.langKey !== 'ko'
           );
           _.each(otherLangPosts, post => {
             const translations =
