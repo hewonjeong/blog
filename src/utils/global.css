@@ -1,12 +1,11 @@
 body {
-  --pink: #333;
   /* rgb(255, 167, 196); */
   background-color: var(--bg);
 }
 
 body.light {
   --bg: #ffffff;
-  --header: var(--pink);
+  --header: #222;
   --textNormal: #222;
   --textTitle: #222;
   --textLink: #326891;
@@ -49,17 +48,6 @@ body:lang(ar) blockquote {
   margin-right: -1.75rem;
 }
 
-/* styles for Persian language */
-body:lang(fa) article,
-body:lang(fa) header > h1 {
-  font-family: 'Vazir';
-}
-/* styles for Arabic language */
-body:lang(ar) article,
-body:lang(ar) header > h1 {
-  font-family: 'Cairo', sans-serif;
-}
-
 body:lang(ko) header,
 body:lang(ko) article {
   word-break: keep-all;
@@ -70,7 +58,7 @@ body:lang(ko) article {
  */
 code[class*='language-'],
 pre[class*='language-'] {
-  color: white;
+  color: #e4e3cf;
   background: none;
   font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
   font-feature-settings: normal;
@@ -132,7 +120,7 @@ pre[class*='language-'] ::selection {
 }
 
 .token.attr-name {
-  color: rgb(173, 219, 103);
+  color: #7db135;
   font-style: italic;
 }
 
@@ -142,7 +130,7 @@ pre[class*='language-'] ::selection {
 
 .token.string,
 .token.url {
-  color: rgb(173, 219, 103);
+  color: #7db135;
 }
 
 .token.variable {
@@ -150,18 +138,20 @@ pre[class*='language-'] ::selection {
 }
 
 .token.number {
-  color: rgb(247, 140, 108);
+  color: #d5c85a;
 }
 
 .token.builtin,
 .token.char,
 .token.constant,
 .token.function {
-  color: rgb(130, 170, 255);
+  color: #eaa62e;
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  /* color: #e5e2c4; */
+  /* color: #a8b4c6; */
+  color: #476188;
 }
 
 .token.selector,
@@ -177,7 +167,8 @@ pre[class*='language-'] ::selection {
 .token.tag,
 .token.operator,
 .token.keyword {
-  color: #ffa7c4;
+  /* color: #ffa7c4; */
+  color: #7da0bb;
 }
 
 .token.boolean {
@@ -198,13 +189,13 @@ pre[data-line] {
 }
 
 .gatsby-highlight-code-line {
-  background-color: hsla(207, 95%, 15%, 1);
+  background-color: #212121;
   display: block;
   margin-right: -1.3125rem;
   margin-left: -1.3125rem;
   padding-right: 1em;
   padding-left: 1.25em;
-  border-left: 0.25em solid #ffa7c4;
+  border-left: 0.25em solid #eab049;
 }
 
 .gatsby-highlight {
@@ -213,7 +204,7 @@ pre[data-line] {
   margin-right: -1.3125rem;
   border-radius: 10px;
   /* background: #011627; */
-  background: #292929;
+  background: #151515;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
 }
