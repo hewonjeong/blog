@@ -42,7 +42,13 @@ Wordpress2016.overrideThemeStyles = () => ({
 });
 
 delete Wordpress2016.googleFonts;
-const fontFamily = ['Merriweather', 'Georgia', 'Noto Sans KR', 'sans-serif'];
+const fontFamily = [
+  '-apple-system',
+  'BlinkMacSystemFont',
+  'Noto Sans KR',
+  'sans-serif',
+];
+// -apple-system, BlinkMacSystemFont,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol
 Wordpress2016.headerFontFamily = fontFamily;
 Wordpress2016.bodyFontFamily = fontFamily;
 
