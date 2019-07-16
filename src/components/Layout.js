@@ -13,7 +13,9 @@ class Layout extends React.Component {
       return (
         <h1
           style={{
-            ...scale(0.75),
+            // ...scale(0.75),
+            fontSize: '1.5rem',
+            fontWeight: 900,
             marginBottom: 0,
             marginTop: 0,
           }}
@@ -34,7 +36,7 @@ class Layout extends React.Component {
       return (
         <h3
           style={{
-            fontFamily: 'Montserrat, sans-serif',
+            // fontFamily: 'Montserrat, sans-serif',
             marginTop: 0,
             marginBottom: 0,
             height: 42, // because
@@ -45,7 +47,7 @@ class Layout extends React.Component {
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
-              color: 'rgb(255, 167, 196)',
+              color: '#222',
             }}
             to={'/'}
           >

@@ -1,6 +1,13 @@
 import '../fonts/fonts-shared.css';
 import './global.css';
 
+const fontFamily = [
+  '-apple-system',
+  'BlinkMacSystemFont',
+  'Noto Sans KR',
+  'sans-serif',
+];
+
 import Typography from 'typography';
 import Wordpress2016 from 'typography-theme-wordpress-2016';
 
@@ -28,7 +35,7 @@ Wordpress2016.overrideThemeStyles = () => ({
   'h1 code, h2 code, h3 code, h4 code, h5 code, h6 code': {
     fontSize: 'inherit',
   },
-  'li code': {
+  'h1li code': {
     fontSize: '1rem',
   },
   blockquote: {
@@ -39,16 +46,13 @@ Wordpress2016.overrideThemeStyles = () => ({
   'blockquote.translation': {
     fontSize: '1em',
   },
+  h1: {
+    fontFamily: fontFamily.join(','),
+  },
 });
 
 delete Wordpress2016.googleFonts;
-const fontFamily = [
-  '-apple-system',
-  'BlinkMacSystemFont',
-  'Noto Sans KR',
-  'sans-serif',
-];
-// -apple-system, BlinkMacSystemFont,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol
+
 Wordpress2016.headerFontFamily = fontFamily;
 Wordpress2016.bodyFontFamily = fontFamily;
 

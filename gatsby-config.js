@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Wild Codes',
+    title: 'Hewon Jeong',
     author: 'Hewon Jeong',
     description:
       "Personal blog by Hewon Jeong.  I'm practicing here to be a craftman.🧘🏻‍♂️",
@@ -81,7 +81,7 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at Wild Codes. You can read it online by <a href="${siteUrl +
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to Hewon Jeong's blog. You can read it online by <a href="${siteUrl +
                   edge.node.fields.slug}">clicking here</a>.)</div>
               `;
 
@@ -127,7 +127,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Wild Codes RSS Feed',
+            title: "Hewon Jeong's Blog RSS Feed",
           },
         ],
       },
@@ -135,8 +135,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Wild Codes`,
-        short_name: `Wild Codes`,
+        name: `Hewon Jeong`,
+        short_name: `Hewon Jeong`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,

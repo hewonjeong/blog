@@ -116,7 +116,7 @@ class BlogPostTemplate extends React.Component {
               }}
               to={'/'}
             >
-              Wild Codes
+              Hewon Jeong
             </Link>
           </h3>
           <Bio />

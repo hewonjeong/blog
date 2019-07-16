@@ -1,8 +1,39 @@
 ---
-title: Hook 개요
-date: '2019-01-26'
-spoiler: Hook은 React 16.8에 새로 추가된 기능입니다. Hook은 class를 작성하지 않고도 state와 다른 React의 기능들을 사용할 수 있게 해줍니다.
+title: temp
+date: '2019-06-28'
+spoiler: session code
 ---
+
+```
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+```
+
+```js
+const element = (
+  <h1 className="greeting">
+    Hello, world!
+  </h1>
+);
+```
+
+```js
+const element = React.createElement(
+  'h1',
+  { className: 'greeting' },
+  'Hello, world!'
+);
+```
+
+
+```bash
+npx create-react-app react-session
+cd react-session
+yarn start
+```
+
 
 *Hook*은 React 16.8에 새로 추가된 기능입니다. *Hook*은 class를 작성하지 않고도 state와 다른 React의 기능들을 사용할 수 있게 해줍니다.
 

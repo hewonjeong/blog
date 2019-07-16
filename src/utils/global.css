@@ -8,7 +8,7 @@ body.light {
   --header: #222;
   --textNormal: #222;
   --textTitle: #222;
-  --textLink: #326891;
+  --textLink: #255275;
   --hr: hsla(0, 0%, 0%, 0.2);
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
@@ -149,9 +149,9 @@ pre[class*='language-'] ::selection {
 }
 
 .token.punctuation {
-  /* color: #e5e2c4; */
+  color: #e5e2c4;
   /* color: #a8b4c6; */
-  color: #476188;
+  /* color: #476188; */
 }
 
 .token.selector,
